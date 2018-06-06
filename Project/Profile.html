@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Profile Page </title>
+		<meta charset = "UTF-8">
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		<style>
+			
+		</style>
+		<script type = "text/javascript">
+			function Delete()  {
+    var txt;
+    if (confirm("Are you sure you want to delete your account?") == true) {
+        window.moveTo("delete.php");
+    } 
+	else {
+        window.moveTo("profile.html");
+    } 
+    document.getElementById("delete").innerHTML = txt;
+}
+			</script>
+	</head>
+	<body>	
+		
+		<header>
+		<img src = "logo.png" width="100" height="100" alt = "logo">
+		<h1 align="center"> PROFILE </h1>
+		<br>
+		<hr>
+		</header>
+			<br><br>
+		<ul class="top-level-menu">
+	    <li><a href="homepage.html">HOME</a></li>
+	    <li><a href="aboutus.html">ABOUT</a></li>
+	    <li>
+	        <a href="#">DESTINATIONS</a>
+	        <ul class="second-level-menu">
+	            <li><a href="#">Helsinki, Finland</a></li>
+	            <li><a href="#">Oslo, Norway</a></li>
+	            <li>
+	                <a href="#">Barcelona, Spain</a>
+	                <ul class="third-level-menu">
+	                    <li><a href="Accomodation.php">Accomodation</a></li>
+	                    <li><a href="#
+						transport.html">Transportation</a></li>
+	                    <li><a href="thingstodo.php">Things To Do</a></li>
+	                    <li><a href="#">Landmarks</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="#">Seattle</a></li>
+	        </ul>
+	    </li>
+	    <li><a href="contact.html">CONTACT US</a></li>
+		<li><input type = "search"><button>Search</button></li>
+		
+	</ul>
+	
+	<ul class = "top-level-menu">
+	<li style="background:none;padding: 0 0 10px 20px;"><a href="#">
+			
+				<img src = "profile.png" width = 50px; >
+				</a>
+			
+				<ul class = "second-level-menu" style=" top:20px;left:80px;">
+		            <li ><a href="Profile.html">Profile</a></li>
+		            <li ><a href="">Messages</a></li>
+		            <li >
+		                <a href="logout.php" onclick= "return confirm('Are you sure you want to logout?')">Logout</a></li>
+					</ul>
+	</ul>
+		
+			<form action = "edit.html" method = "POST">
+			<table bgcolor= "OldLace" width = 50%>
+				<tr><th align = "left">Full Name : </th>
+					<td>Lucy Mahat</td></tr>
+				<tr><th align = "left">Nationality :</th>
+					<td>Nepali</td></tr>
+					<tr><th align = "left">Email Address :</th>
+						<td>lucy.mahat@gmail.com</td></tr>
+						<tr><th align = "left">Phone Number :</th>
+							<td>67474</td></tr>
+							<tr><th align = "left">User Name :</th>
+								<td>lucy.mahat</td></tr>
+								<tr><th align = "left">Password :</th>
+									<td>Lucy123</td></tr>
+					</table>
+					<input type = "submit" name = "edit" style ="background-color:dodgerblue;color:white;padding:14px 40px;border-radius:10px" value = "Edit Profile";>
+					<button onclick= "Delete()" id = "delete" name = "delete" style ="background-color:red;color:white;padding:14px 40px;border-radius:10px" >Delete Account</button>
+				
+</form>
+<footer>
+			 
+			<table>
+			
+				<tr>
+					<th>Contact information</th>
+					
+					<th>Copyright 2017 Get Set Go</th>
+					<th>All Rights Reserved </th>
+					
+					
+					<th><a href = "Terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th><a href = "policy.html">Accessibility Policy</a> </th>
+					
+					<th><a href = "">Language</a></th>
+				</tr>
+				
+			</table>			
+
+		</footer>
+		</body>
+</html>

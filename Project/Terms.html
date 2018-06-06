@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Travel blog </title>
+		<meta charset = "UTF-8">
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		<script type = "text/javascript">
+		
+		function Back() {
+		    window.history.back();
+		}
+		function Forward() {
+		    window.history.forward();
+		}
+		function Search() {
+			var data = document.getElementById('searchdata').value
+			
+			
+			if (data == 0) {
+				Nullalert.style.color = "Red";
+				Nullalert.innerHTML = "Please enter a search query!";	
+			
+				
+		}
+		else {
+				
+			location.replace("search.php");
+				
+		}
+		}
+		</script>
+		<style>
+			h3
+				{
+				font-size: 20px;
+				color: brown;
+				}
+			table
+				{
+				width: 100%
+				}
+				
+				
+					.submit {
+				
+														background-color: dodgerblue;
+														padding: 14px 40px;
+														border-radius : 10px;
+														color: white;
+														}
+				
+				.btn {
+				
+										background-color: brown;
+											padding: 8px 16px;
+												border-radius : 50%;
+											color: white;
+											}
+									</style>
+	</head>
+	<body>
+		<span id = "Nullalert"></span>
+		<table>
+			<tr>
+				<td align = left><button onclick = "Back()" class = "btn" > < </button></td>
+					<td align = right><button onclick = "Forward()" class = "btn" >  > </button></td>
+			</tr>
+		</table>
+		<header>
+		<img src = "http://i.imgur.com/VavnyfA.png" width="100" height="100" alt = "logo">
+		<h1> Terms & Conditions </h1>	
+		
+		</header>
+		<br><br><br>
+			<ul class="top-level-menu">
+		    <li><a href="homepage.html">HOME</a></li>
+		    <li><a href="aboutus.html">ABOUT</a></li>
+		    <li>
+		        <a href="#">TRAVEL DESTINATIONS</a>
+		        <ul class="second-level-menu">
+		            <li><a href="#">Helsinki, Finland</a></li>
+		            <li><a href="#">Oslo, Norway</a></li>
+		            <li>
+		                <a href="#">Barcelona, Spain</a>
+		                <ul class="third-level-menu">
+		                    <li><a href="Accomodation.php">Accomodation</a></li>
+		                    <li><a href="#
+							transport.html">Transportation</a></li>
+		                    <li><a href="thingstodo.v">Things To Do</a></li>
+		                    <li><a href="#">Landmarks</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="#">Seattle</a></li>
+		        </ul>
+		    </li>
+		    <li><a href="contact.html">CONTACT US</a></li>
+			<li><input type = "search" id = "searchdata"><button onclick = "Search()">Search</button></li>
+			<li><a href="login.html">Sign In</a></li>
+		</ul>
+		
+		<br>
+	<ol>
+		<LI>
+			<h3> Accepting Terms:</h3>
+Our idea is to guide people to visit around or travel other countries with our previous experiences. This way, we believe, people do not have to waste their time searching about the places they want to visit but are not sure about what to expect.
+		</li>
+		
+		
+	<li>
+<h3>Eligibility:</h3>
+		
+	You should be at least 13 years or above to use our services. Children below 13 can use the services with under the supervision of their guardian/s.
+		</li>
+		
+		
+	<li>
+<h3>Registration:</h3>
+	- You must register with a valid email with your personal details to view our contents,
+  	  as well as to share or comment on any posts.
+		</li>
+		
+		
+	<li>
+<h3>Content Availability and Restrictions:</h3>
+	<p>You are free to:
+	<ul>
+	<li> Read and Print our articles for personal use. </li>
+	<li>Make comments about the places after a visit. </li>
+	<li>Share your opinion about other places which are not listed. </li>
+	</ul>
+	</p>
+ 	However we donot allow the users to post for advertising third parties since we donot involve any third 
+  	 parties and we just provide the information for more like reading or colleccting idea purposes only.
+		</li>
+		
+		
+	<li>
+ <h3>Rules of services </h3>
+	You consent to the below Terms of Use and to the applicable community policies when you 
+	visit our sites or participate in our communities with the understanding that:
+		
+		
+		
+	You are Free to put your contributions 
+	– You generally must license for your contributions like making comments and sharing your views.
+	– The content of articles and other projects is for informational purposes only and we are not 
+	  bounded to provide you the exact information as it may vary from point of view.
+		</li>
+		
+		
+	Under the following conditions:
+	<ul>
+	<li>You take responsibility for your arrangements (since we only give information to ease your plan).</li>
+	<li>You support a civil environment and do not harass other users while on comments. Abusive comments shall
+	  be forbidden as possible.</li>
+	<li>You do not violate copyright or other laws.</li>
+	</ul>
+		</li>
+		
+		
+	<li>
+<h3>Third Party Services</h3>
+		
+	</li>
+	</OL>
+	<footer>
+			 
+			<table width = "100%">
+			
+				<tr>
+					<th>Contact information</th>
+					
+					<th>Copyright 2017 Get Set Go</th>
+					<th>All Rights Reserved </th>
+					
+					
+					<th><a href = "terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th><a href = "policy.html">Accessibility Policy</a> </th>
+					
+					<th><a href = "">Language</a></th>
+				</tr>
+				
+			</table>			
+
+		</footer>
+         </body>
+
+
+
+
+

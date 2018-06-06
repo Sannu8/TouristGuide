@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Accessibility Policy </title>
+	<meta charset = "UTF-8">
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		<style>
+			.bold
+				{
+				font-weight: bold;}
+				
+					h3
+						{
+						font-size: 20px;
+						color: brown;
+						}
+					table
+						{
+						width: 100%
+						}
+				
+				
+							.submit {
+				
+																background-color: dodgerblue;
+																padding: 14px 40px;
+																border-radius : 10px;
+																color: white;
+																}
+				
+						.btn {
+				
+												background-color: brown;
+													padding: 8px 16px;
+														border-radius : 50%;
+													color: white;
+													}
+											
+		</style>
+		<script type = "text/javascript">
+		
+		function Back() {
+		    window.history.back();
+		}
+		function Forward() {
+		    window.history.forward();
+		}
+		function Search() {
+			var data = document.getElementById('searchdata').value
+			
+			
+			if (data == 0) {
+				Nullalert.style.color = "Red";
+				Nullalert.innerHTML = "Please enter a search query!";	
+			
+				
+		}
+		else {
+				
+			location.replace("search.php");
+				
+		}
+		}
+		</script>
+</head>
+<body>
+	<span id = "Nullalert"></span>
+	<table>
+		<tr>
+			<td align = left><button onclick = "Back()" class = "btn" > < </button></td>
+				<td align = right><button onclick = "Forward()" class = "btn" >  > </button></td>
+		</tr>
+	</table>
+	<header>
+		<img src = "http://i.imgur.com/VavnyfA.png" width="100" height="100" alt = "logo">
+		<h1>Accessibility Policy</h1>
+	</header>
+	<br><br><br>
+			<ul class="top-level-menu">
+		    <li><a href="homepage.html">HOME</a></li>
+		    <li><a href="aboutus.html">ABOUT</a></li>
+		    <li>
+		        <a href="#">TRAVEL DESTINATIONS</a>
+		        <ul class="second-level-menu">
+		            <li><a href="#">Helsinki, Finland</a></li>
+		            <li><a href="#">Oslo, Norway</a></li>
+		            <li>
+		                <a href="#">Barcelona, Spain</a>
+		                <ul class="third-level-menu">
+		                    <li><a href="Accomodation.php">Accomodation</a></li>
+		                    <li><a href="#
+							transport.html">Transportation</a></li>
+		                    <li><a href="thingstodo.php">Things To Do</a></li>
+		                    <li><a href="#">Landmarks</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="#">Seattle</a></li>
+		        </ul>
+		    </li>
+		    <li><a href="contact.html">CONTACT US</a></li>
+			<li><input type = "search" id = "searchdata"><button onclick = "Search()">Search</button></li>
+			<li><a href="login.html">Sign In</a></li>
+		</ul>
+	<br>
+		
+<h3>This policy is valid from 17 February 2017.</h3>
+<p>
+This blog is a personal blog written and edited by Elmita Baidhya, Sandhya Mahat, Kalyan Giri and Krishna. For questions about this blog, please contact any of the editors at the <text class = "bold">GetSetGo.com</text>.
+</p>
+<p>
+This blog accepts any cash advertising, sponsorship, paid insertions or any forms of compensation. We believe in honesty of relationship, opinion and identity. The compensation received may influence the advertising content, topics or posts made in this blog and these will be clearly identified as paid or sponsored content.
+</p>
+<p>
+The owners of this blog may be compensated to provide opinion on services, websites and various other topics. Even though the owners of this blog receive compensation for our posts or advertisements, we always give our honest opinions, findings, beliefs, and experiences on those topics or company. The views and opinions expressed on this blog are based on bloggers own idea. Anything claim, statistic, quote or other representation about a company or service should be verified in question with the company or service provider itself.
+</p>
+<p>
+This blog does not contain any thing which might bring a conflict of interest.
+</p>
+
+	<footer>
+			
+			<table width = "100%">
+				<tr>
+					<th> Contact information</th>
+					<th> Copyright 2017 Get Set Go</th>
+					<th> All Rights Reserved </th>
+					<th> <a href = "Terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th> <a href = "Policy.html">Accessibility Policy</a> </th>
+					
+					<th> <a href = "language.html">Language</a></th>
+				</tr>
+			</table>			
+
+		</footer>
+	
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> SignIn Page </title>
+		<meta charset = "UTF-8">
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		<style>
+			h3
+				{
+				font-size: 20px;
+				color: brown;
+				}
+			table
+				{
+				width: 100%
+				}
+				
+				
+					.submit {
+				
+														background-color: dodgerblue;
+														padding: 14px 40px;
+														border-radius : 10px;
+														color: white;
+														}
+				
+				.btn {
+				
+										background-color: brown;
+											padding: 8px 16px;
+												border-radius : 50%;
+											color: white;
+											}
+									</style>
+		<script>
+			function CheckPass() {
+				 
+				 var pw = document.getElementById('password').value,
+				        errors = [];
+			
+				    
+				    
+					if (pw.search(/[0-9]/) < 0) {
+				        Validate.style.color = "Red";
+						Validate.innerHTML = "Invalid Password" 
+				    }
+				   
+				    
+					else if (pw.search(/[A-Z]/) < 0) {
+					  Validate.style.color = "Red";
+					  Validate.innerHTML = "Invalid Password ";
+					  
+					 }
+ 				    else if (pw.search(/[a-z]/i) < 0) {
+  					  Validate.style.color = "Red";
+  					  Validate.innerHTML = "Invalid Password ";
+					}
+				   
+				    else {
+						Validate.style.color = "Green";
+						Validate.innerHTML = "Valid Password";
+			 	    	}
+				    
+				}
+			
+				function Back() {
+				    window.history.back();
+				}
+				function Forward() {
+				    window.history.forward();
+				}
+				function Search() {
+					var data = document.getElementById('searchdata').value
+					
+					
+					if (data == 0) {
+						Nullalert.style.color = "Red";
+						Nullalert.innerHTML = "Please enter a search query!";	
+					
+						
+				}
+				else {
+						
+					location.replace("search.php");
+						
+				}
+				}
+					
+		</script>
+			
+	</head>
+	<body>
+		<span id = "Nullalert"></span>
+		<table>
+			<tr>
+				<td align = left><button onclick = "Back()" class = "btn" > < </button></td>
+					<td align = right><button onclick = "Forward()" class = "btn" >  > </button></td>
+			</tr>
+		</table>
+		<header>
+		<img src = "http://i.imgur.com/VavnyfA.png" width="100" height="100" alt = "logo">
+		<h1> Sign In </h1>	
+		</header>
+		<br><br><br>
+			<ul class="top-level-menu">
+		    <li><a href="homepage.html">HOME</a></li>
+		    <li><a href="aboutus.html">ABOUT</a></li>
+		    <li>
+		        <a href="#">TRAVEL DESTINATIONS</a>
+		        <ul class="second-level-menu">
+		            <li><a href="#">Helsinki, Finland</a></li>
+		            <li><a href="#">Oslo, Norway</a></li>
+		            <li>
+		                <a href="#">Barcelona, Spain</a>
+		                <ul class="third-level-menu">
+		                    <li><a href="Accomodation.php">Accomodation</a></li>
+		                    <li><a href="#
+							transport.html">Transportation</a></li>
+		                    <li><a href="thingstodo.php">Things To Do</a></li>
+		                    <li><a href="#">Landmarks</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="#">Seattle</a></li>
+		        </ul>
+		    </li>
+		    <li><a href="contact.html">CONTACT US</a></li>
+			<li><input type = "search" id = "searchdata"><button onclick = "Search()">Search</button></li>
+			<li><a href="login.html">Sign In</a></li>
+		</ul>
+		
+		<br>
+		
+		
+		<form action="checklogin.php" method = "POST">
+			<table>
+				<br><br>
+				<tr>
+					
+					<th valign = "bottom" > Username: 
+					<input type = "text" name = "username" id = "username" required value = "" min = "5"></th>
+				</tr>
+				
+				<tr valign = "bottom">
+						
+						<th >Password:
+					<input type = "password" name = "password" id = "password" required value = "" min="6" onkeyup = "CheckPass(); return false;" >
+				</th>
+			</tr>
+			<tr>
+				
+				<td align = "center"> 
+					<span id = "Validate" class = "Validate">           </span>
+				</td>
+				</tr>
+				<tr>
+					
+						<th ><br><input type = "checkbox" name ="box" value="checked">
+			Remember me  </th>
+				</tr>
+				<tr>
+						
+					<th >
+						<br><input type = "submit" name = "login" value = "Sign In" style ="background-color:dodgerblue;color:white;padding:14px 40px;border-radius:10px" id= "login";>
+					</th>
+				</tr>
+				<tr>
+					
+					<th><a href = ""><br>Forgot Your Password?</a></th>
+					
+				</tr>
+				<tr>
+					
+					<td>Don't have an account yet? <a href = "Register.html">Sign Up!</a></td>
+			</table>
+		</form>
+		
+		
+	
+		
+		<footer>
+			 
+			<table width = 100%>
+			
+				<tr>
+					<th>Contact information</th>
+					
+					<th>Copyright 2017 Get Set Go</th>
+					<th>All Rights Reserved </th>
+					
+					
+					<th><a href = "Terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th><a href = "Policy.html">Accessibility Policy</a> </th>
+					
+					<th><a href = "">Language</a></th>
+				</tr>
+				
+			</table>			
+
+		</footer>
+
+	</body>
+</html>

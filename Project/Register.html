@@ -1,0 +1,279 @@
+<html>
+	<head>
+		
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		
+		
+		<style>
+			h3
+				{
+				font-size: 20px;
+				color: brown;
+				}
+			table
+				{
+				width: 100%
+				}
+				
+				
+					.submit {
+				
+														background-color: dodgerblue;
+														padding: 14px 40px;
+														border-radius : 10px;
+														color: white;
+														}
+				
+				.btn {
+				
+										background-color: brown;
+											padding: 8px 16px;
+												border-radius : 50%;
+											color: white;
+											}
+									</style>
+		
+		<script type = "text/javascript">
+			
+			function PassMatch() {
+				var p = document.getElementById('password');
+				var c = document.getElementById('confirm');
+				var m = document.getElementById('Message');
+				if (p.value == c.value) {
+					Message.style.color = "Green";
+					Message.innerHTML = "Passwords Match!";
+					}
+				else {
+					Message.style.color = "Red";
+					Message.innerHTML = "Passwords Do Not Match!";
+					}
+				}
+				
+			function CheckPass() 
+				{
+				 var pw = document.getElementById('password').value,
+				        errors = [];
+			
+				    
+				    
+					if (pw.search(/[0-9]/) < 0) {
+				        Validate.style.color = "Red";
+						Validate.innerHTML = "Your password must contain at lease one digit." 
+				    }
+				   
+				    
+					else if (pw.search(/[A-Z]/) < 0) {
+					  Validate.style.color = "Red";
+					  Validate.innerHTML = "Your password needs at least one uppercase letter. ";
+					  
+					 }
+ 				    else if (pw.search(/[a-z]/i) < 0) {
+  					  Validate.style.color = "Red";
+  					  Validate.innerHTML = "Your password needs at least one letter. ";
+					}
+				   
+				    else {
+						Validate.style.color = "Green";
+						Validate.innerHTML = "Your password is valid";
+			 	    	}
+				    
+				}
+				
+				function Back() {
+				    window.history.back();
+				}
+				function Forward() {
+				    window.history.forward();
+				}
+				
+				function Admin() {
+					var text;
+				    var code = prompt("Please enter the admin registration verification code:", "");
+					
+					if (code == "Admin01pa55") {
+						AdminRegister.style.color = "Green";
+						AdminRegister.innerHTML = "Registration as Admin possible.";
+					document.getElementById("AdminRadio").checked = true;
+						
+					
+				}
+				else {
+					
+					AdminRegister.style.color = "Red";
+					AdminRegister.innerHTML = "Sorry! You will be registered as a User.";
+				    document.getElementById("UserRadio").checked = true;
+				}
+				}
+				
+				function Search() {
+					var data = document.getElementById('searchdata').value
+					
+					
+					if (data == 0) {
+						Nullalert.style.color = "Red";
+						Nullalert.innerHTML = "Please enter a search query!";	
+					
+						
+				}
+				else {
+						
+					location.replace("search.php");
+						
+				}
+				}
+									
+		</script>
+	</head>
+	<body>
+		<span id = "Nullalert"></span>
+		<table>
+			<tr>
+				<td align = left><button onclick = "Back()" class = "btn" > < </button></td>
+					<td align = right><button onclick = "Forward()" class = "btn" >  > </button></td>
+				</table>
+		<header>
+		<img src = "http://i.imgur.com/VavnyfA.png" width="100" height="100" alt = "logo">
+		<h1> Register With Us! </h1>	
+		</header>
+		<br>	<br><br>
+		
+			<ul class="top-level-menu">
+		    <li><a href="homepage.html">HOME</a></li>
+		    <li><a href="aboutus.html">ABOUT</a></li>
+		    <li>
+		        <a href="#">TRAVEL DESTINATIONS</a>
+		        <ul class="second-level-menu">
+		            <li><a href="#">Helsinki, Finland</a></li>
+		            <li><a href="#">Oslo, Norway</a></li>
+		            <li>
+		                <a href="#">Barcelona, Spain</a>
+		                <ul class="third-level-menu">
+		                    <li><a href="Accomodation.html">Accomodation</a></li>
+		                    <li><a href="transport.html">Transportation</a></li>
+		                    <li><a href="todo.html">Things To Do</a></li>
+		                    <li><a href="#">Landmarks</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="#">Seattle</a></li>
+		        </ul>
+		    </li>
+		    <li><a href="contact.html">CONTACT US</a></li>
+			<li>
+				<form method = "post" action = "search.php">
+				<input type = "text" id = "searchdata" name= "searchdata">
+				<button onclick = "Search()" name= "searchbtn">Search</button>
+				</form>
+			</li>
+			<li><a href="login.html">Sign In</a></li>
+		</ul>
+		
+		
+		<br><br>
+		
+		<form action="register.php" method = "post">
+			<table >
+				<tr>
+					<th>Full Name:</th>
+					<td><input type= "text" name ="fullname" required value ="" minlength = 5> *</td>
+				<tr>
+					<td></td>
+					<td><i><small> 5 or more characters, letters and/or numbers.</small></i> </td>
+				</tr>	
+				</tr>
+				<tr valign = "bottom">
+					<th> Nationality: </th>
+					<td><br><input type = "text" name = "nationality" required value = "" minlength = 5> *</td>
+				</tr>
+				<tr valign = "bottom">
+					<th>Email Address:</th> 
+					<td><br><input type = "email" name = "email" required value = "" minlength = 10> *
+				</tr>
+				<tr>
+					<td></td>
+					<td><i> 10 or more characters, letters or numbers. </i></td>
+				</tr>
+				<tr valign = "bottom">
+					<th>Phone Number:</th> 
+					<td><br><input type = "number" name = "phone" value = ""></td>
+				</tr>
+				<tr valign = "bottom">
+					<th> Username: </th>
+					<td><br><input type = "text" name = "username" id = "username" required value = "" minlength = 5> *</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><i><small> 5 or more characters, letters and/or numbers.</small> </i></td>
+				</tr>
+				<div class = "pass">
+				<tr valign = "bottom">
+					<th>Password:</th>
+					<td><br><input type = "password" id = "password" name = "password" required value = ""  minlength = 6 onmouseout = "CheckPass(); return false;" > * <span id = "Validate" class = "Validate">    </span> <br></td>
+				</tr>
+				</div>
+				<tr>
+					<td></td>
+					<td><i><small>6 or more characters, letters and numbers.<br>
+						Must contain atleast one number, one lowercase letter and one uppercase letter.<small></i>
+					</td>
+				</tr>
+				<div class = "pass">
+				<tr>
+					<th>Confirm Password:</th>
+					<td><br><input type = "password" id = "confirm" name = "confirm" required value = "" onkeyup = "PassMatch(); return false;"> * <br>
+						<span id = "Message" class = "Message">    </span>
+					</td>
+					
+				</tr>
+				</div>
+					<tr>
+						<td></td>
+						<td><br>
+						<input type = "radio" name ="level" id = "AdminRadio" value = "admin" onclick = "Admin(); " required> Register as Admin
+						<br><span id = "AdminRegister" class = "AdminRegister">    </span></td>
+					</tr>
+					<tr><td></td>
+						<td> <input type = "Radio" name ="level" id = "UserRadio" value = "user" required> 
+						Register as User </td>
+					</tr>
+				<tr>
+					<td></td>
+					<td><br><input type = "checkbox" name ="box"  required> * 
+			I have read and agree to the <a href= "Terms.html">Terms of Service. </a> 							</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<br><input type = "submit" name = "register" value = "Register" class = "submit"></button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Already have an account? <a href = "Login.html">Sign In</a></td>
+				</tr>
+			</table>
+		</form>
+		<footer>
+			 
+			<table>
+			
+				<tr>
+					<th>Contact information</th>
+					
+					<th>Copyright 2017 Get Set Go</th>
+					<th>All Rights Reserved </th>
+					
+					
+					<th><a href = "Terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th><a href = "Policy.html">Accessibility Policy</a> </th>
+					
+					<th><a href = "">Language</a></th>
+				</tr>
+				
+			</table>			
+
+		</footer>
+
+	</body>
+</html>

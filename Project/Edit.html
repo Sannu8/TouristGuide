@@ -1,0 +1,252 @@
+<html>
+	<head>
+		
+		<link rel = "stylesheet" href = "stylesheet.css" type = "text/css">
+		
+		
+		<style>
+			h3
+				{
+				font-size: 20px;
+				color: brown;
+				}
+			table
+				{
+				width: 100%
+				}
+				
+				
+					.submit {
+				
+														background-color: dodgerblue;
+														padding: 14px 40px;
+														border-radius : 10px;
+														color: white;
+														}
+				
+				.btn {
+				
+										background-color: brown;
+											padding: 8px 16px;
+												border-radius : 50%;
+											color: white;
+											}
+									</style>
+		
+		<script type = "text/javascript">
+			
+			function PassMatch() {
+				var p = document.getElementById('password');
+				var c = document.getElementById('confirm');
+				var m = document.getElementById('Message');
+				if (p.value == c.value) {
+					Message.style.color = "Green";
+					Message.innerHTML = "Passwords Match!";
+					}
+				else {
+					Message.style.color = "Red";
+					Message.innerHTML = "Passwords Do Not Match!";
+					}
+				}
+				
+			function CheckPass() {
+				 var pw = document.getElementById('password').value,
+				        errors = [];
+			
+				    
+				    
+					if (pw.search(/[0-9]/) < 0) {
+				        Validate.style.color = "Red";
+						Validate.innerHTML = "Your password must contain at lease one digit." 
+				    }
+				   
+				    
+					else if (pw.search(/[A-Z]/) < 0) {
+					  Validate.style.color = "Red";
+					  Validate.innerHTML = "Your password needs at least one uppercase letter. ";
+					  
+					 }
+ 				    else if (pw.search(/[a-z]/i) < 0) {
+  					  Validate.style.color = "Red";
+  					  Validate.innerHTML = "Your password needs at least one letter. ";
+					}
+				   
+				    else {
+						Validate.style.color = "Green";
+						Validate.innerHTML = "Your password is valid";
+			 	    	}
+				    
+				}
+				
+		
+				function Back() {
+				    window.history.back();
+				}
+				function Forward() {
+				    window.history.forward();
+				}
+				
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td align = left><button onclick = "Back()" class = "btn" > < </button></td>
+					<td align = right><button onclick = "Forward()" class = "btn" >  > </button></td>
+			</tr>
+		</table>
+		<header>
+		<img src = "http://i.imgur.com/VavnyfA.png" width="100" height="100" alt = "logo">
+		<h1> Edit Your Profile </h1>	
+		</header>
+		<br><br><br>
+		
+		<ul class="top-level-menu">
+	    <li><a href="homepage.html">HOME</a></li>
+	    <li><a href="aboutus.html">ABOUT</a></li>
+	    <li>
+	        <a href="#">TRAVEL DESTINATIONS</a>
+	        <ul class="second-level-menu">
+	            <li><a href="#">Helsinki, Finland</a></li>
+	            <li><a href="#">Oslo, Norway</a></li>
+	            <li>
+	                <a href="#">Barcelona, Spain</a>
+	                <ul class="third-level-menu">
+	                    <li><a href="Accomodation.php">Accomodation</a></li>
+	                    <li><a href="#
+						transport.html">Transportation</a></li>
+	                    <li><a href="thingstodo.php">Things To Do</a></li>
+	                    <li><a href="#">Landmarks</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="#">Seattle</a></li>
+	        </ul>
+	   
+	    </li>
+	    <li><a href="contact.html">CONTACT US</a></li>
+		<li><input type = "search"><button>Search</button></li>
+	</ul>
+		<ul class = "top-level-menu">
+		<li style="background:none;padding: 0 0 10px 20px;"><a href="#">
+				
+					<img src = "profile.png" width = 50px; >
+					</a>
+				
+					<ul class = "second-level-menu" style=" top: 20px;left: 80;">
+			            <li ><a href="Profile.html">Profile</a></li>
+			            <li ><a href="">Messages</a></li>
+			            <li >
+			               <a href="logout.php" onclick= "return confirm('Are you sure you want to logout?')">Logout</a></li>
+						</ul>
+		</ul>
+		
+		
+		
+		<br><br><br>
+		<form action="" method = "post">
+			<fieldset>
+			  <legend>Update User Information</legend>
+			  <table>
+			  <tr>
+			  <th> UserName: </th>
+			  <td><input type="text" name = "username" id = "oldusername" minlength = 5></td>
+			  </tr>
+  			  <tr>
+  			  <th> Old Password: </th>
+  			  <td><input type="password"></td>
+  			  </tr>
+			  <tr>
+			  <th> New UserName: </th>
+			  <td><input type="text" name = "newusername" id = "newusername" minlength = 5><br><i><small> 5 or more characters, letters and/or numbers.</small></i></td>
+			  </tr>
+			  <tr>
+			  <th> Password: </th>
+			  <td><input type="updateuserpassword" id=></td>
+			  </tr>
+			  <tr>
+			  <td></td>
+			  <th> <input type = "submit" name = "usernameupdate" value = "Update" class = "button"> </th>
+			  
+			  </tr>
+			  </table>
+			   </fieldset>
+			 <fieldset>
+			 <legend>Update Email</legend>
+			<table>
+				<tr>
+					<th> UserName:</th>
+					<td><input type= "text" name ="emailuser"  value ="" minlength = 5> </td>
+				</tr>
+				<tr>
+					<th> Password:</th>
+					<td><input type= "text" name ="emailpassword" value ="" minlength = 5> </td>
+				</tr>
+				<tr>
+					<th> New Email:</th>
+					<td><input type= "email" name ="newemail" value ="" minlength = 10>
+					<br><small><i> 10 or more characters, letters or numbers. </i></small> </td>
+				</tr>
+  			  <tr>
+  			  <td></td>
+  			  <th> <input type = "submit" name = "emailbutton" value = "Update" class = "button"> </th>
+			  
+  			  </tr>
+			  </table>
+			  </fieldset>
+  			<fieldset>
+  			  <legend>Change Password</legend>
+  			  <table>
+  			  <tr>
+  			  <th> UserName: </th>
+  			  <td><input type="text"></td>
+  			  </tr>
+  			 
+  			  <tr>
+  			  <th> New Password: </th>
+  			  <td>
+			  <input type="password" id = "password" name = "password"  value = ""  minlength = 6 onmouseout = "CheckPass(); return false;">
+			  <span id = "Validate" class = "Validate">    </span>
+			  <br>
+			  <i><small>6 or more characters, letters and numbers.<br>
+			  	Must contain atleast one number, one lowercase letter and one uppercase letter.<small></i>
+				</td>
+  			  </tr>
+  			  <tr>
+  			  <th>Confirm New Password: </th>
+  			  <td><input type = "password" id = "confirm" name = "confirm" value = "" onkeyup = "PassMatch(); return false;">  <br>
+						<span id = "Message" class = "Message">    </span></td>
+  			  </tr>
+  			  <tr>
+  			  <td></td>
+  			  <th> <input type = "submit" name = "register" value = "Update" class = "button"> </th>
+			  
+  			  </tr>
+  			  </table>
+  			   </fieldset>
+		
+		</form>
+		<footer>
+			 
+			<table>
+			
+				<tr>
+					<th>Contact information</th>
+					
+					<th>Copyright 2017 Get Set Go</th>
+					<th>All Rights Reserved </th>
+					
+					
+					<th><a href = "Terms.html">Terms & Conditions </a> 
+					</th>
+					
+					<th><a href = "Policy.html">Accessibility Policy</a> </th>
+					
+					<th><a href = "">Language</a></th>
+				</tr>
+				
+			</table>			
+
+		</footer>
+
+	</body>
+</html>

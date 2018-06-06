@@ -1,0 +1,113 @@
+body {
+	background-color: bisque;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+}
+
+
+header {
+		text-align: center; 
+		color: brown;
+	}
+	
+footer {
+		font-size: 13px;
+}
+h1 {
+	color: brown;
+	font-size: 40px;
+}
+
+h2 {
+	color: brown;
+	font-size: 30px;
+	}
+
+/* For image wrapping */
+img {
+	float: left;
+	margin: 0 0 10px 10px;
+	}
+
+.third-level-menu
+									{
+									    position: absolute;
+									    top: 0;
+									    right: -150px;
+									    width: 150px;
+									    list-style: none;
+									    padding: 0;
+									    margin: 0;
+									    display: none;
+									}
+
+									.third-level-menu > li
+									{
+									    height: 30px;
+									    background: grey;
+									}
+									.third-level-menu > li:hover { background: brown; }
+
+									.second-level-menu
+									{
+									    position: absolute;
+									    top: 30px;
+									    left: 0;
+									    width: 150px;
+									    list-style: none;
+									    padding: 0;
+									    margin: 0;
+									    display: none;
+									}
+
+									.second-level-menu > li
+									{
+									    position: relative;
+									    height: 30px;
+									    background:grey;
+									}
+									.second-level-menu > li:hover { background: brown; }
+
+									.top-level-menu
+									{
+									    list-style: none;
+									    padding: 0;
+									    margin: 0;
+									}
+
+									.top-level-menu > li
+									{
+									    position: relative;
+									    float: left;
+									    height: 30px;
+									    width: 220px;
+									    background: grey;
+									}
+									.top-level-menu > li:hover { background: brown; }
+
+									.top-level-menu li:hover > ul
+									{
+									    /* Displaying the next level menu on  */
+									    display: inline-block;
+									}
+
+
+									/* Menu Link Styles */
+
+									.top-level-menu a /* Apply to all links inside the multi-level menu */
+									{
+									    font: bold 14px;
+									    color: white;
+									    text-decoration: none;
+									    padding: 0 0 0 10px;
+
+									    /* Make the link cover the entire list item-container */
+									    display: block;
+									    line-height: 30px;
+									}
+									.top-level-menu a:hover { color: white; }
+									
+									
+	
